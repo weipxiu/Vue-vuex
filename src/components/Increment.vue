@@ -7,7 +7,7 @@
       <input type="button" value="+" @click="addHandle" />
       <p>{{num2}}</p>
       <button @click="sumFn({add:20})">{{sum}}</button>
-      <p @click="fn">我被限制了大小不超过200-----------{{sum1}}</p>
+      <p>我被限制了大小不超过200-----------{{sum1}}</p>
     </div>
   </div>
 </template>
@@ -31,10 +31,7 @@
         ...mapMutations({ //同步
           deHandle:'deIncrement',
           sumFn:'sumFn'
-        }),
-        fn(){
-          console.log(this.$store)
-        }
+        })
       }
 
     }
