@@ -37,9 +37,10 @@ Vue.use(Vuex)
 // 定义一个容器
 
 let store = new Vuex.Store({
-    state: {
+    state: { //初始化状态
       count: 100,
-      sum:99
+      sum:99,
+      isShow:true
     },
     getters: {//类似计算属性
       filterCount(state){
@@ -49,7 +50,7 @@ let store = new Vuex.Store({
         return state.sum >= 200 ? 200 : state.sum
       }
     },
-    mutations: {
+    mutations: {//payload接受页面事件交互传过来的参数值
       addIncrement(state, payload){
          state.count += payload.n;
        },
@@ -65,12 +66,12 @@ let store = new Vuex.Store({
         setTimeout(()=>{
             // 改变状态，提交mutations
             commit("addIncrement", {n:5})
-            dispatch("textAction", {test: '测试'})
+            dispatch("textAction", {test: '111'})
         },1000)
       },
-    textAction(context, obj){
-        console.log(obj)
-    }
+      textAction(context, obj){//接收上面dispatch提交过来的参数
+        console.log(this.state.isShow)//相当于一个异步操作里的回调函数
+      }
   }
   // ,
   //   modules:{ //modules：多个store模块集合
