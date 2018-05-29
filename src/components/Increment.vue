@@ -8,6 +8,8 @@
       <p>{{num2}}</p>
       <button @click="sumFn({add:20})">{{sum}}</button>
       <p>我被限制了大小不超过200-----------{{sum1}}</p>
+      <p>{{$store.state.count}}</p>
+      <!-- 另一种获取vuex数据的方式 -->
     </div>
   </div>
 </template>
