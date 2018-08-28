@@ -1,6 +1,6 @@
 <template>
     <ul class="list">
-      <li v-for="item in data" @click="getTitleHandle(item.title)">{{item.title}}</li>
+      <li v-for="(item,index) in data" @click="getTitleHandle(item.title)" :key="index">{{item.title}}</li>
     </ul>
 </template>
 
@@ -13,12 +13,12 @@ export default {
   },
   methods:{
     getTitleHandle(title){
-      // 改变vuex中状态
+      // 触发同步操作的方法
       this.$store.commit("changeTitle", {title})
     }
   },
   created(){
-      // 获取数据
+      //触发异步操作的方法
     this.$store.dispatch('getListAction')
   }
 }
