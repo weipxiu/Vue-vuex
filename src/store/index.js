@@ -69,7 +69,7 @@ let store = new Vuex.Store({
             dispatch("textAction", {test: '111'})
         },1000)
       },
-      textAction(context, obj){//接收上面dispatch提交过来的参数
+      textAction(context, options){//接收上面dispatch提交过来的参数
         console.log(this.state.isShow)//相当于一个异步操作里的回调函数
       }
   }
