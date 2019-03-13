@@ -24,8 +24,10 @@
           sum1: 'sumGet'
         }),
         ...mapState(['count','sum'])
-      }
-      ,
+      },
+      mounted(){
+          console.log(this.$store.state.selectModule.title)
+      },
       methods: {
         ...mapActions({//异步action
           addHandle: 'addAction'

@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 let selectModule = {
   state:{
-    title:'hello123',
+    title:'打印title',
     list: []
   },
   mutations:{
