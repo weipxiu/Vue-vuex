@@ -4,32 +4,32 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-// let selectModule = {
-//   state:{
-//     title:'hello123',
-//     list: []
-//   },
-//   mutations:{
-//     changeTitle(state, payload){
-//       state.title = payload.title
-//     },
-//     changeList(state, list){
-//       state.list = list;
-//     }
-//   },
-//   actions:{
-//     getListAction({commit}){
-//       // 发送请求
-//       axios.get('http://easy-mock.com/mock/594f5d4b9adc231f3569be76/list/list')
-//         .then((data)=>{
-//           commit("changeList", data.data);  // 拿到数据后，提交mutations，改变状态
-//         })
-//         .catch((error)=>{
-//           conso.log(error)
-//         })
-//     }
-//   }
-// };
+let selectModule = {
+  state:{
+    title:'hello123',
+    list: []
+  },
+  mutations:{
+    changeTitle(state, payload){
+      state.title = payload.title
+    },
+    changeList(state, list){
+      state.list = list;
+    }
+  },
+  actions:{
+    getListAction({commit}){
+      // 发送请求
+      axios.get('http://easy-mock.com/mock/594f5d4b9adc231f3569be76/list/list')
+        .then((data)=>{
+          commit("changeList", data.data);  // 拿到数据后，提交mutations，改变状态
+        })
+        .catch((error)=>{
+          conso.log(error)
+        })
+    }
+  }
+};
 
 // this.$store.state.title
 // this.$store.state.selectModule.title
@@ -73,10 +73,10 @@ let store = new Vuex.Store({
         console.log(this.state.isShow)//相当于一个异步操作里的回调函数
       }
   }
-  // ,
-  //   modules:{ //modules：多个store模块集合
-  //     selectModule
-  //   }
+  ,
+    modules:{ //modules：多个store模块集合
+      selectModule
+    }
 })
 
 export default store

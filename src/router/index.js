@@ -8,6 +8,7 @@ import Increment from '@/components/Increment'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
