@@ -4,8 +4,9 @@
     <div>
       <input type="button" value="-" @click="deHandle({de:5})" />
       <span>{{count}}</span>
-      <input type="button" value="+" @click="addHandle" />
+      <input type="button" value="+" @click="addHandle({n:1})" />
       <p>{{num2}}</p>
+      <span>点击</span>
       <button @click="sumFn({add:20})">{{sum}}</button>
       <p>我被限制了大小不超过200-----------{{sum1}}</p>
       <p>{{$store.state.count}}</p>

@@ -62,15 +62,15 @@ let store = new Vuex.Store({
       }
     },
    actions: {
-      addAction({commit,dispatch}){
+      addAction({commit,dispatch},payload){
         setTimeout(()=>{
             // 改变状态，提交mutations
-            commit("addIncrement", {n:5})
-            dispatch("textAction", {test: '111'})
+            commit("addIncrement",payload )
+            dispatch("textAction", {test: '异步回调拿到的参数'})
         },1000)
       },
       textAction(context, options){//接收上面dispatch提交过来的参数
-        console.log(this.state.isShow)//相当于一个异步操作里的回调函数
+        console.log(options)//相当于一个异步操作里的回调函数
       }
   }
   ,
