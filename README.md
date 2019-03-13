@@ -1,6 +1,6 @@
 # vuex-examplate
 
-> 关于vuex的最佳实践
+> 关于vuex的最佳实践，包含了vuex中所有可能需要用到的方法，足够你去做任何一个项目
 
 ## Build Setup
 

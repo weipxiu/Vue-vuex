@@ -38,7 +38,6 @@
           sumFn:'sumFn'
         })
       }
-
     }
 </script>
 <style>
