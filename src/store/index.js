@@ -25,7 +25,7 @@ let selectModule = {
           commit("changeList", data.data);  // 拿到数据后，提交mutations，改变状态
         })
         .catch((error)=>{
-          conso.log(error)
+          console.log(error)
         })
     }
   }
