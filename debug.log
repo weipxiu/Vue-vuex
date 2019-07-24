@@ -1,1 +1,2 @@
 [0624/130757.463:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)
+[0724/093202.225:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: 管道已结束。 (0x6D)
