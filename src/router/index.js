@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Select',
-      component: Select
+      component: Increment
     },
     {
       path: '/increment',
