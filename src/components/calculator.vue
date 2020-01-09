@@ -51,6 +51,7 @@
       },
       mounted(){
           console.log(this.$store.state.title) // 顶层
+          console.log(this.$store.getters.filterCount) //获取顶层getters属性值
           console.log(this.$store.state.localtModule.title) //模块中
       },
       methods: {
