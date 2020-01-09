@@ -24,9 +24,16 @@
       <br>
       <h2>vuex - axios请求</h2>
       <button @click="getListAction">点击获取</button>
-      <ul v-if="listData">
+      <ul v-if="listData" class="list_movie">
+        <li>
+          <span>时间</span>
+          <span>电影名称</span>
+          <span>年份</span>
+        </li>
         <li v-for="item in listData.subjects" :key="item.id">
-          {{item.mainland_pubdate}} {{item.title}} {{item.year}}
+          <span>{{item.mainland_pubdate}}</span>
+          <span>{{item.title}}</span>
+          <span>{{item.year}}</span>
         </li>
       </ul>
     </div>
@@ -79,5 +86,17 @@
 <style>
 span{
   color: #ed145b
+}
+.list_movie{
+  margin-top:15px;
+}
+ul.list_movie > li{
+  margin:5px;
+}
+ul.list_movie > li > span{
+  width: 100px;
+  display: inline-block;
+  color: #333;
+  vertical-align: text-top;
 }
 </style>
