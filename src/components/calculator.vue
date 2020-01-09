@@ -21,6 +21,14 @@
       <p>获取顶层数据title: <span>{{title}}</span> <button @click="locaChangeMoney">点击修改</button> </p>
       <p>获取指定module模块中数据:支付宝到账<span> <button @click="addMoney(5)">{{money}}</button> 万</span></p>
 
+      <br>
+      <h2>vuex - axios请求</h2>
+      <button @click="getListAction">点击获取</button>
+      <ul v-if="listData">
+        <li v-for="item in listData.subjects" :key="item.id">
+          {{item.mainland_pubdate}} {{item.title}} {{item.year}}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -30,9 +38,9 @@
 
     export default {
       computed: {
-        ...mapState('localtModule',['title']),
-        ...mapGetters(['filterCount','computedSum']),
-        ...mapState(['count','sum', 'money'])
+        ...mapState(['count','sum', 'money']),
+        ...mapState('localtModule',['title','listData']),
+        ...mapGetters(['filterCount','computedSum'])
       },
       mounted(){
           console.log(this.$store.state.title) // 顶层
@@ -40,9 +48,11 @@
       },
       methods: {
         //方式一
-        ...mapActions(['changeNumber']),
         ...mapMutations(['sumReduce','sumFn','save']),
         ...mapMutations('localtModule',['save']),
+        ...mapActions(['changeNumber']),
+        ...mapActions('localtModule',['getListAction']),
+
         sumAdd(option){
           this.changeNumber(option)
         },

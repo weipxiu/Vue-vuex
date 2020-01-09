@@ -1,7 +1,5 @@
 export default {
   changeNumber({ commit, state, rootState, dispatch, getters }, payload) {
-    console.log('state', state)
-    console.log('rootState', rootState)
     setTimeout(() => {
       // 改变状态，提交mutations
       // commit("addIncrement", payload) //第一种更新addIncrement
