@@ -22,6 +22,9 @@
       <p>获取指定module模块中数据:支付宝到账<span> <button @click="addMoney(5)">{{money}}</button> 万</span></p>
 
       <br>
+      <p>{{$store.state.localtAboutfrom.msg}}</p>
+
+      <br>
       <h2>vuex - axios请求</h2>
       <button @click="getListAction">点击获取</button>
       <ul v-if="listData" class="list_movie">
