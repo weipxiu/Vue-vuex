@@ -7,7 +7,7 @@ export default {
     save: (state, payload) => {
       console.log('payload', payload)
       Object.keys(payload).forEach(e => {
-        if (this.hasOwnProperty(e)) {
+        if (state.hasOwnProperty(e)) {
           state[e] = payload[e]
         } else {
           console.error('Sorry，更新失败：属性' + e + '在对应的modules模块中未定义！')
