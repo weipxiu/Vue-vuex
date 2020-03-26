@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 
 import about from '@/components/about'
-import calculator from '@/components/calculator'
+import home from '@/components/home'
 
 Vue.use(Router)
 
@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'calculator',
-      component: calculator
+      name: 'home',
+      component: home
     },
     {
       path: '/about',
