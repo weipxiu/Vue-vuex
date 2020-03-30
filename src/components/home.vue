@@ -2,7 +2,7 @@
   <div>
     <h2>简易加减法计算器</h2>
     <div>
-      <input type="button" value="-" @click="sumReduce({de:5})" />
+      <input type="button" value="-" @click="sumReduce({de:50})" />
         <span><span>{{count}}</span></span>
       <input type="button" value="+" @click="sumAdd({n:10})" />
 
@@ -18,8 +18,8 @@
 
       <br>
       <h3>封装方法修改vuex中state</h3>
-      <p>获取顶层数据title: <span>{{title}}</span> <button @click="locaChangeMoney">点击修改</button> </p>
-      <p>获取指定module模块中数据:支付宝到账<span> <button @click="addMoney(5)">{{money}}</button> 万</span></p>
+      <p>获取指定module模块中数据title: <span>{{title}}</span> <button @click="locaChangeMoney">点击修改</button> </p>
+      <p>获取顶层数据money:支付宝到账<span> <button @click="addMoney(5)">{{money}}</button> 万</span></p>
 
       <br>
       <p>{{$store.state.localtAboutfrom.msg}}</p>
@@ -67,14 +67,14 @@
         sumAdd(option){
           this.changeNumber(option)
         },
+        //修改局部title
+        locaChangeMoney(){
+          this.$store.commit("localtModule/save", { title : '有钱了有钱了！' })
+        },
         //修改顶层的金钱
         addMoney(parm){
           this.$store.commit("save", { money : this.money + parm })
         },
-        //修改局部title
-        locaChangeMoney(){
-          this.$store.commit("localtModule/save", { title : '有钱了有钱了！' })
-        }
 
         //方式二
         // ...mapMutations({ //同步
