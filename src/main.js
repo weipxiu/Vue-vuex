@@ -5,6 +5,12 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+//全局引入ECharts
+// import ECharts from 'vue-echarts'
+// 饼状图
+// import 'echarts/lib/chart/pie'
+// Vue.component('v-chart', ECharts)
+
 Vue.config.productionTip = false
 
 import '@/assets/css/select.css'
