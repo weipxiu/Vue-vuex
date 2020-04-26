@@ -61,7 +61,7 @@
         //方式一
         ...mapMutations(['sumReduce','sumFn','save']),
         ...mapMutations('localtModule',['save']),
-        ...mapActions(['changeNumber']),
+        ...mapActions(['changeNumber']), // 同等于将 `this.changeNumber()` 映射为 `this.$store.dispatch('changeNumber')`
         ...mapActions('localtModule',['getListAction']),
 
         sumAdd(option){
