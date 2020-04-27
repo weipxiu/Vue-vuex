@@ -1,20 +1,19 @@
 <template>
-    <div>
-      <p>{{$store.state.localtAboutfrom.msg}}</p>
-    </div>
+  <div>
+    <p>{{ $store.state.localtAboutfrom.msg }}</p>
+  </div>
 </template>
 
 <script>
 export default {
-  computed:{
+  computed: {
   },
-  methods:{
-    getTitleHandle(title){
+  created() {
 
+  },
+  methods: {
+    getTitleHandle(title) {
     }
-  },
-  created(){
-
   }
 }
 </script>
