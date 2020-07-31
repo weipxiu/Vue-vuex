@@ -4,7 +4,7 @@ import Router from 'vue-router'
 
 import about from '@/components/about'
 import home from '@/components/home'
-import charts from '@/components/charts'
+// import charts from '@/components/charts'
 
 Vue.use(Router)
 
@@ -21,10 +21,10 @@ export default new Router({
       name: 'about',
       component: about
     },
-    {
-      path: '/charts',
-      name: 'charts',
-      component: charts
-    }
+    // {
+    //   path: '/charts',
+    //   name: 'charts',
+    //   component: charts
+    // }
   ]
 })
