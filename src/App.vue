@@ -3,8 +3,8 @@
     <div style="margin-bottom:50px">
       <button type="button" @click="handleActions">主应用向子应用通信</button>
     </div>
-    <router-link to="/about">about</router-link>
-    <router-link to="/vueChild">VueChild</router-link
+    <router-link to="/about">关于我about</router-link>
+    <router-link to="/vueChild">进入vue3子应用</router-link
     ><!--新增部分-->
 
     <router-view></router-view>

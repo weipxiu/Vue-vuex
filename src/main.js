@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 
 import '@/assets/css/select.css'
 
-//======================新增内容开始===============================
+// 新增内容开始
 import { registerMicroApps, start } from 'qiankun' //新增部分，导入qiankun中的两个方法
 const apps = [
   {
@@ -32,8 +32,11 @@ const apps = [
   }
 ]
 registerMicroApps(apps);//注册子应用
-start();//启动qiankun
-//======================新增内容结束===============================
+// 启动qiankun
+start({
+  sandbox:true // 默认(true)情况下沙箱可以确保单实例场景子应用之间的样式隔离，但是无法确保主应用跟子应用、或者多实例场景的子应用样式隔离。当配置为 { strictStyleIsolation: true } 时表示开启严格的样式隔离模式。这种模式下 qiankun 会为每个微应用的容器包裹上一个 shadow dom 节点，从而确保微应用的样式不会对全局造成影响。
+});
+// 新增内容结束
 
 /* eslint-disable no-new */
 new Vue({

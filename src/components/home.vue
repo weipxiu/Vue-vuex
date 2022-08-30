@@ -87,7 +87,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 span{
   color: #ed145b
 }
