@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "echarts": "^4.7.0",
+    "qiankun": "^2.7.5",
     "vue": "^2.3.3",
     "vue-axios": "^2.0.2",
     "vue-echarts": "^5.0.0-beta.0",
