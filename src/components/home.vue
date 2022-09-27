@@ -84,6 +84,12 @@ export default {
     sumAdd(option) {
       // this.$store.dispatch('changeNumber', option) // 因为有上面映射，所以可以简写成this.changeNumber(option)
       this.changeNumber(option);
+
+      // 在某些情况，我们需要对 Action 中的函数名重命名以避免和组件内部的变量冲突，这时候我们可以使用对象的方式接收参数：
+      // 例：将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+      // ...mapActions({
+      //   newChangeNumber: 'changeNumber'
+      // })
     },
     // 修改局部title
     locaChangeMoney() {
